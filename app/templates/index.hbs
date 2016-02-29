@@ -1,5 +1,7 @@
 {{outlet}}
 
+{{mock-newlisting-tile categories=model.categories}}
+
 <div class="row">
   <div class="col-xs-2 col-xs-offset-2">
     <h2>Categories</h2>
@@ -10,7 +12,7 @@
     </div>
   </div>
   <div class="col-xs-6">
-    <h2>Listings</h2>
+    <h2>Top Listings</h2>
     <div class="well">
       {{#each model.listings as |l|}}
         {{mock-listing-tile listing=l}}

@@ -6,5 +6,8 @@ export default Ember.Route.extend({
       categories: this.store.findAll("mock-category"),
       listings: this.store.findAll("mock-listing"),
     });
+  },
+  actions: {
+    
   }
 });

@@ -1,7 +1,14 @@
 # Mocklist
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Craigslist is a hugely popular classified advertising website for buying and selling, jobs, events, personals, forums, etc. For this project, explore Craigslist and then re-create a similar online marketplace.
+
+## Rules
+
+1. As a user, I want to see all of the categories I can explore on the main page so I can decide where to go.
+2. As a user, I want to see all of the listings for for a category when I select it.
+3. As a user, I want the most recent listings in a category displayed at the top of the page.
+4. As a user, I want to see the details for a listing when I select it (including when posted).
+5. As an admin, I want to be able to add, edit and delete a new listing in a category.
 
 ## Prerequisites
 
@@ -50,4 +57,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-

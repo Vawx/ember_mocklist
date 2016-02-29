@@ -1,0 +1,76 @@
+{{yield}}
+
+<div class="row">
+  <div class="col-xs-2 col-xs-offset-3">
+    <div class="well">
+      <form>
+        <div class="row">
+          <div class="col-xs-4">
+            <span class="label label-default" style="margin-left:2em;">New Category</span>
+            <div class="container" style="margin-top:0.25em;">
+              {{input value=category id="category"}}
+              <span class="btn btn-primary" {{action 'addCategory'}}>Add</span>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="col-xs-4">
+    <div class="well">
+      <form>
+        <div class="row">
+          <div class="col-xs-4">
+            <span class="label label-default" style="margin-left:2em;">Current Categories</span>
+            <div class="container" style="margin-top:0.25em">
+              {{#each categories as |c|}}
+              <div class="container">
+                {{c.name}} <a href="#" class="label label-warning" style="margin-left:2em;" {{action 'editCategory' c}}>Edit</a>
+              </div>
+              <span class="label label-info">Listings</span>
+              <ul>
+                {{#each c.listings as |l|}}
+                  <li>
+                    <span href="#" class="label label-default" style="margin-left:2em;">{{l.name}}</span>
+                    <div class="container">
+                      {{l.info}}
+                    </div>
+                  </li>
+                {{/each}}
+              </ul>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{{#if editCurrentCategory}}
+  <div class="row">
+    <div class="col-xs-4 col-xs-offset-4">
+      <h3>Edit Category</h3>
+      <div class="well">
+        <div class="container">
+          <span class="label label-default" style="margin-left:-2em;">Category Name</span>
+          <div class="row" style="margin-top:0.25em;">
+            {{input value=categoryName id="categoryName"}}
+          </div>
+        </div>
+        <span class="label label-default" style="margin-left:-0.5em;">New Listing</span>
+        <div class="row" style="margin-top:0.25em;padding-left:1em;">
+          {{input value=listing id="listing"}}
+        </div>
+        <div class="container">
+          <span class="label label-default" style="margin-left:-1.5em;">Listing Info</span>
+          <div class="row" style="margin-top:0.25em;">
+            {{textarea cols="60" rows="4" value=info id="info"}}
+          </div>
+        </div>
+        <span class="btn btn-primary" {{action 'submitEditCategory'}}>Add</span>
+      </div>
+    </div>
+  </div>
+{{/if}}

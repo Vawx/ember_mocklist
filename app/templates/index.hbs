@@ -4,15 +4,17 @@
   <div class="col-xs-2 col-xs-offset-2">
     <h2>Categories</h2>
     <div class="well">
-      {{#each model.category as |c|}}
-        {{model-category-tile category=c}}
+      {{#each model.categories as |c|}}
+        {{mock-category-tile category=c}}
       {{/each}}
     </div>
   </div>
   <div class="col-xs-6">
     <h2>Listings</h2>
     <div class="well">
-
+      {{#each model.listings as |l|}}
+        {{mock-listing-tile listing=l}}
+      {{/each}}
     </div>
   </div>
 </div>

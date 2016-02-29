@@ -4,7 +4,9 @@
   <div class="col-xs-2 col-xs-offset-2">
     <h2>Categories</h2>
     <div class="well">
-
+      {{#each model.category as |c|}}
+        {{model-category-tile category=c}}
+      {{/each}}
     </div>
   </div>
   <div class="col-xs-6">
